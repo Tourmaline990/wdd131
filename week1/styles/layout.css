@@ -1,0 +1,58 @@
+.design{
+    display: grid;
+    grid-template: auto 2fr auto/auto 2fr auto;
+   
+}
+header{
+    grid-column: 1/4;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    
+}
+.big{
+    grid-row: 1;
+    text-align: center;
+    background-color: skyblue;
+}
+.navigation{
+    grid-row: 2;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navigation a{
+    color: black;
+    text-decoration: none;
+}
+main{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: 1fr ;
+    
+}
+.content{
+    grid-column: 1/4;
+    grid-row: 1;
+    background-color: gray;
+    text-align: center;
+    padding: 1rem;
+
+
+}
+.aside{
+    grid-column: 4/5;
+    grid-row: 1;
+    background-color: navy;
+    text-align: center;
+    padding: 1rem;
+}
+footer{
+    grid-column: 1/4;
+    grid-row: 4;
+    background-color: navajowhite;
+    text-align: center;
+} 
