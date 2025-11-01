@@ -37,16 +37,18 @@ header nav{
     font-family: "open sans";
     background-color: #0F766E;
     align-items: center;
+    flex-wrap: wrap;
 }
 header nav a{
     text-decoration: none;
-    color: #0A0F0F;
+    color: #ffffff;
 }
 header nav a:hover{
     text-decoration: overline;
+    color: gold;
 }
 header nav .active{
-  color: #0d1b2a;
+  color: #f1f1f1;
  
 }
 
