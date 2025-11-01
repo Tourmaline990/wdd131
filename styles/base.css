@@ -38,6 +38,7 @@ header nav{
     background-color: #0F766E;
     align-items: center;
     flex-wrap: wrap;
+    color: #ffffff;
 }
 header nav a{
     text-decoration: none;
@@ -48,7 +49,7 @@ header nav a:hover{
     color: gold;
 }
 header nav .active{
-  color: #f1f1f1;
+  color: #F2F2F2;
  
 }
 
