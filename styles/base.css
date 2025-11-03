@@ -39,6 +39,7 @@ header nav{
     align-items: center;
     flex-wrap: wrap;
     color: #ffffff;
+    gap: 1rem;
 }
 header nav a{
     text-decoration: none;
@@ -57,7 +58,7 @@ main{
     grid-column: 1/4;
     grid-row: 2/3 ;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     grid-template-rows: repeat(3, auto);
     width: 80%;
     margin: 0 auto;
