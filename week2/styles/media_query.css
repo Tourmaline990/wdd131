@@ -1,0 +1,22 @@
+body{
+    font-family: "roboto";
+}
+.selectors{
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 2px solid purple;
+    text-align: center;
+    padding: 1rem;
+}
+header ,footer{
+    background-color: plum;
+}
+main{
+    display: grid;
+    grid-template-columns: 1;
+    gap: 1rem;
+}
+.first,.second{
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
