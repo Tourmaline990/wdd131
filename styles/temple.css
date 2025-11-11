@@ -7,7 +7,7 @@ header {
     border: 1px solid white;
     grid-template-columns: 1fr 1fr;
 }
-header h1{
+header span{
     grid-column: 1;
     color: #FFFFFF;
     padding: 0.5rem;
