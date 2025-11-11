@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px){
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    nav .active{
+        color: #FFD700;
+    }
+    
+    #menu{
+        display: none;
+    }
+    nav{
+        background-color:  #0F766E;
+    }
+}
