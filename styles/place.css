@@ -113,7 +113,7 @@ footer{
     color: #ffffff;
     font-family: var(--heading_font);
    }
-   .data span{
+   .data div{
     background-color: #00563F;
     padding: 1rem;
     box-shadow: 2px 4px black;
