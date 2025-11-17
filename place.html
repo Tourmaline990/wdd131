@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Of Residence</title>
+    <meta name="author" content="Agbetoba Aaliya">
+    <meta name="description" content="The subject of this page is a country or place where you live, have visited, or wish to visit. ">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+       <h1>Nigeria</h1>
+    </header>
+    <main>
+      <div class="picture">
+        <picture>
+            <source srcset="images/horse_large.webp" media="(min-width: 1000px)" >
+             <source srcset= "images/horse_medium.webp" media="(min-width: 750px)">
+             <img src="images/flower_small.webp" alt="street image replace a country">
+        </picture>
+      </div>
+      <div class="data">
+        <span class="h2">
+        <h2>Data 💻</h2>
+        </span>
+        <p>Area: 923,768 km² </p>
+        <p>Population: 233,560,000  </p>
+        <p>Capital: Abuja</p>
+        <p>Languages: English (official); over 500 indigenous languages</p>
+        <p>Currency: Nigerian Naira (NGN)</p>
+        <p>Time Zones: West Africa Time (WAT, UTC+01:00)</p>
+       <p> Calling Code: +234  </p>
+       <p>Internet TLD: .ng </p>
+      </div>
+      <div class="weather">
+        <section class="section">
+        <h3>Weather</h3>
+        <img src="images/cloudy_weather.svg" alt="A cloudy weather" width="100">
+        </section>
+        <p>Temperature: 31°C(88 °F) </p>
+        <p>Wind: 15km/h</p>
+        <p>Conditions: Mostly cloudy</p>
+        <p >Windchill: <span id="windchill"></span> </p>
+       
+    </div>
+    </main>
+    <footer>
+       <p> ©️ <span id="currentyear"></span> 🌴 Agbetoba Aaliya 🌴 Lagos</p>
+        <p id="modified"></p>
+    </footer>
+</body>
+</html>

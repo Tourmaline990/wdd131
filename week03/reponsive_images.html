@@ -7,9 +7,11 @@
 </head>
 <body>
    <main>
-    <div>
+    <div class="hero">
         <picture>
-            <source srcset="images/hero_large.webp" media="min-width: 1000px">
+            <source srcset="images/hero_large.webp" media="(min-width: 1000px)">
+            <source srcset="images/hero_medium.webp" media="(min-width: 500px)">
+            <img src="images/hero_small.webp" alt="Small temple image" width="500" height="250">
         </picture>
     </div>
     
