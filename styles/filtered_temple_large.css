@@ -15,4 +15,10 @@
     nav{
         background-color:  #0F766E;
     }
+    #append{
+        grid-template-columns: auto auto;
+        max-width: 1200px;
+        padding: 2rem;
+
+    }
 }
