@@ -89,9 +89,7 @@ main{
     max-width: 750px;
     margin: 0 auto;
 }
-main h1{
-    text-align: center;
-}
+
 #append {
   display: grid;
   grid-template-columns: 1fr ;
