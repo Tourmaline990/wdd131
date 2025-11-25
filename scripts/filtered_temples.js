@@ -1,9 +1,10 @@
+// getting date and the document last modified.
 const currentyear = document.getElementById("currentyear");
 const today = new Date();
 currentyear.innerHTML = ` <span class="design">${today.getFullYear()} </span>`;
 document.getElementById("modified").innerHTML = document.lastModified;
 
-
+// hamburger menu.
 const menubutton = document.querySelector('#menu');
 const navigation =  document.querySelector('.navigation');
 
@@ -11,7 +12,7 @@ menubutton.addEventListener('click',function(){
     navigation.classList.toggle('open');
     menubutton.classList.toggle('open');
 });
-
+// a array of objects.
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -91,7 +92,7 @@ const temples = [
    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/200x320/hong-kong-china-temple-lds-39528-wallpaper.jpg"
  }
 ];
-
+// function to create,populate and append  object to html
 function createTempleCards(temples){
 
   const container = document.querySelector('#append');
@@ -121,13 +122,14 @@ function createTempleCards(temples){
        container.append(card);
     });
 }
+//calling function.
 (createTempleCards(temples));
-
+// function to get year out of a string.
 function slice_string(string){
     let first = string.dedicated;
      return parseInt(first.slice(0,4));
 }
-
+// EVENT LISTENERS
 const lesser_link = document.querySelector('#lesser');
 lesser_link.addEventListener('click',() =>{
   event.preventDefault();
