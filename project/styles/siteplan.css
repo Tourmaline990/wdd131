@@ -1,0 +1,67 @@
+:root{
+    --heading_fonts: 'lato';
+    --body_fonts: 'open sans';
+    --color1: #0F2F24;
+    --color2 : #CFAF64;
+    --color3: #FFFFFf;
+    --color4: #1C1C1C;
+}
+*{
+    background-color: var(--color3);
+    color: var(--color4);
+}
+header,footer{
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 850px;
+}
+main{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1.2rem;
+}
+header,footer{
+    text-align: center;
+    background-color: var(--color2);    
+}
+h1{
+    background-color: transparent;
+    font-family: var(--heading_fonts);
+}
+
+footer p{
+    color: var(--color4);
+    background-color: transparent;
+       font-size: 1.2rem;
+}
+h2,h3,h4,h5,h6{
+    text-align: center;
+    font-family: var(--heading_fonts);
+    font-size: 1.5rem ;
+    padding: .5rem;
+    color: var(--color4);
+    
+}
+p,.year{
+    font-size: 1.2rem;
+    font-family: var(--body_fonts);
+    color: var(--color4);
+}
+li{
+    font-size: 1.2rem;
+    font-family: var(--body_fonts);
+    color: var(--color4); 
+}
+.year{
+    background-color: transparent;
+}
+img{
+    display: block;
+    background-color: #eee;
+    border:0.2px solid black;
+    margin: 0 auto;
+    max-width: 100%;
+}
+div p{
+    text-align: center;
+}
