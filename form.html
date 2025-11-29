@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review form</title>
     <meta name="author" content="Agbetoba Aaliya">
-    <meta name="description" content="A product review form">
+    <meta name="description" content="A product review form,using good form design,specific field requirements, and includes a submission confirmation with a counter">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +18,13 @@
     </header>
     <main>
         <form method="get" action="review.html" class="form">
-            <section>
+            
                 <label for="product-name">Product Name*</label>
                 <select required name="product-name" id="product-name" >
                     <option value="" selected>Select a Product... &#9662; </option>
                 </select>
-            </section>
-            <section>
+            
+            
             <div class="a">Overall Rating </div>
                 <div class="star">
                     <div>
@@ -48,17 +48,17 @@
                 <input type="radio" name="star" id="star-e" value="1">
                    </div>  
                 </div>  
-            </section>
+          
             <section>
                 <label for="date">Date of Installation*</label>
                 <input type="date" id="date" name="date" required>
             </section>
             <section>
                <div class="a">Which  of the product's feature did you find useful? (Check all that apply)</div> 
-                   <label><input type="checkbox" id="check1" name="features" value="quality">Quality</label>
-                   <label><input type="checkbox" id="check2" name="features" value="Credibility">Credibility</label>
-                   <label><input type="checkbox" id="check3" name="features" value="Unique Features">Unique Features</label>
-                   <label><input type="checkbox" id="check4" name="features" value="Multifunctionality">Multifunctionality</label>
+                   <label for="check1"><input type="checkbox" id="check1" name="features" value="quality">Quality</label>
+                   <label for="check2"><input type="checkbox" id="check2" name="features" value="Credibility">Credibility</label>
+                   <label for="check3"><input type="checkbox" id="check3" name="features" value="Unique Features">Unique Features</label>
+                   <label for="check4"><input type="checkbox" id="check4" name="features" value="Multifunctionality">Multifunctionality</label>
             </section>
             <section> 
                 <label for="Written">Written Review <span>(Optional)</span></label>

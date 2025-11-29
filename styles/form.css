@@ -79,6 +79,12 @@ input[type = 'submit']{
 #year, #modify{
   color: #ffffff; 
 }
+@media screen and (min-width) {
+  input[type = 'submit']{
+    width: 80%;
+    text-align: center;
+  }
+}
 .counter h1{
    font-size: 1.5rem;
    color: black;
