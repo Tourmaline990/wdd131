@@ -51,7 +51,7 @@ textarea{
 }
 
 
-input[type = 'checkbox']{
+input[type ='checkbox']{
 margin-right: 8px;
 }
 .form :required{
