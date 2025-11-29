@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review form</title>
+    <meta name="author" content="Agbetoba Aaliya">
+    <meta name="description" content="A product review form">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body >
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="form">
+            <section>
+                <label for="product-name">Product Name*</label>
+                <select required name="product-name" id="product-name" >
+                    <option value="" selected>Select a Product... &#9662; </option>
+                </select>
+            </section>
+            <section>
+            <div class="a">Overall Rating </div>
+                <div class="star">
+                    <div>
+                <label for="star-a">⭐</label>
+                <input type="radio" name="star" id="star-a" value="5"> 
+                </div>
+                <div>
+                <label for="star-b">⭐⭐</label>
+                <input type="radio" name="star" id="star-b" value="4">
+                </div>
+                <div>
+                <label for="star-c">⭐⭐⭐</label>
+                <input type="radio" name="star" id="star-c" value="3">
+                </div>
+                <div>
+                <label for="star-d">⭐⭐⭐⭐</label>
+                <input type="radio" name="star" id="star-d" value="2">
+                </div>
+                <div>
+                <label for="star-e">⭐⭐⭐⭐⭐</label>
+                <input type="radio" name="star" id="star-e" value="1">
+                   </div>  
+                </div>  
+            </section>
+            <section>
+                <label for="date">Date of Installation*</label>
+                <input type="date" id="date" name="date" required>
+            </section>
+            <section>
+               <div class="a">Which  of the product's feature did you find useful? (Check all that apply)</div> 
+                   <label><input type="checkbox" id="check1" name="features" value="quality">Quality</label>
+                   <label><input type="checkbox" id="check2" name="features" value="Credibility">Credibility</label>
+                   <label><input type="checkbox" id="check3" name="features" value="Unique Features">Unique Features</label>
+                   <label><input type="checkbox" id="check4" name="features" value="Multifunctionality">Multifunctionality</label>
+            </section>
+            <section> 
+                <label for="Written">Written Review <span>(Optional)</span></label>
+                <textarea name="Written" id="Written"></textarea>
+            </section> 
+            <section>
+               <label for="user">Your Name <span>(Optional)</span></label>
+                <input type="text" id="user" name="user">
+            </section>
+            <section>
+            <input type="submit" value="Share Review">
+            </section>
+        </form>
+    </main>
+    <footer>
+        <p>©️ <span id="year"></span> Agbetoba🌴Aliya🌴Nigeria</p>
+        <p>Last Modification: <span id="modify"></span></p>
+        
+    </footer>
+</body>
+</html>

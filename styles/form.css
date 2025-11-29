@@ -1,0 +1,95 @@
+
+header,footer{
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 850px; 
+    text-align: center;
+    font-family: 'quicksand','tahoma';
+    background-color:tomato ;
+    color: #ffffff; 
+    box-shadow: 2px 4px 3px #000000; 
+    border: 1px solid black;
+   
+    
+}
+main{
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 1rem;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.form label, .a{
+  display: block;
+  font-size: 1.1rem;
+  font-family: tahoma;
+  color: #1c1c1c;
+  padding-top: .7rem;
+  padding-bottom:.7rem ;
+}
+input[type = 'text'],
+input[type = 'date'],
+select,
+textarea{
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  appearance: none;
+  padding: .8rem;
+  display: block;
+  
+}
+.star{
+ display: flex;
+ flex-direction: row;
+ gap: 1rem;
+ align-items: center;
+ flex-wrap: wrap;
+ 
+}
+
+
+input[type = 'checkbox']{
+margin-right: 8px;
+}
+.form :required{
+  border-right: 3px solid red;
+}
+.form :required:valid{
+  border-right: 3px solid green;
+}
+span{
+  color: navy;
+}
+input[type = 'submit']{
+  border: none;
+  padding: 1rem;
+  margin: 1rem 2% 2rem 2%;
+  width: 96%;
+  max-width: 400px;
+  background-color: gray;
+  border-radius: 6px;
+  box-shadow: 2px 3px 4px 2px #1c1c1c;
+  font-family: tahoma;
+  font-size: .9rem;
+  
+}
+#year, #modify{
+  color: #ffffff; 
+}
+.counter h1{
+   font-size: 1.5rem;
+   color: black;
+   background-color: tomato;
+   text-align: center;
+   font-family: 'quicksand';
+   padding: 1rem;
+}
+.counter p{
+  font-size: 1.1rem;
+   color: black;
+   font-family: tahoma;
+   
+}
