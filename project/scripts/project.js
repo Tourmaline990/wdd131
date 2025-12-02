@@ -1,3 +1,9 @@
+let year = document.querySelector('#year')
+let modify = document.querySelector('#modify')
+let today = new Date();
+year.innerHTML = `${today.getFullYear()}`;
+modify.innerHTML = document.lastModified;
+
 const traveller = [
     {
     id: "travel_1",
@@ -21,11 +27,11 @@ const traveller = [
     }
 ]
 traveller.forEach(travel=>{
-    let card = document.querySelector("select");
-    let option = document.createElement('option')
-    option.text = travel.name
-    option.value = travel.id
-    card.append(option)
+    let card = document.querySelector("#travel");
+    let options = document.createElement('option');
+    options.text = travel.name;
+    options.value = travel.id;
+    card.append(options);
 })
 let yesradio = document.querySelector('#yes');
 let noradio = document.querySelector('#no')
@@ -46,3 +52,4 @@ noradio.addEventListener('change',()=>{
       container.innerHTML = '';
     }
 })
+
