@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <meta name="author" content="Agbetoba Aaliya">
+    <meta name="description" content="Contact page, to enable users rach out, and make a selection based on their preference.">
+    <script src="scripts/project.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form  method="get" action="personalized.html">
+           <fieldset>
+              <legend>Your Information</legend>
+              <label for="name">Name*</label>
+              <input type="text" id="name" name="name" placeholder="Aaliya" required>
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" placeholder="someone@gmail.com" required>
+              <div>Age Range*</div>
+              <input type="radio" name="age" id="age_1" value="1" required>
+              <label for="age_1">18 - 30</label>
+              <input type="radio" name="age" id="age_2" value="2" required>
+              <label for="age_2">30 - 45</label>
+              <input type="radio" name="age" id="age_3" value="3" readonly>
+              <label for="age_3">45 - 60</label>
+           </fieldset>
+           <fieldset>
+            <legend>Travel preferences</legend>
+            <div>What type of destination interest you? </div>
+            <input type="checkbox" id="rock" name="" value="" >
+            <label for="rock">Rocky/Mountains</label>
+            <input type="checkbox" id="beach" name="" value="" >
+            <label for="beach">Beaches/Island</label>
+            <input type="checkbox" id="history" name="" value="" >
+            <label for="history">Historical/cultural sites</label>
+            <input type="checkbox" id="countryside" name="" value="" >
+            <label for="countryside">Quiet Countryside</label>
+            <input type="checkbox" id="safari" name="" value="" >
+            <label for="safari">Wildlife/Safari</label>
+            <input type="checkbox" id="urban" name="" value="" >
+            <label for="urban">Urban Cities</label>
+            <label for="travel">What type of traveler are you? </label>
+            <select name="traveler" id="travel" required>
+                <option disabled selected value="">Please select...</option>
+            </select>
+            <div>Do you have any allergy?</div>
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="num" value="yes">
+            <label for="no">No</label>
+            <input type="radio" id="no" name="num" value="no">
+            <div class="allergy_container"></div>
+            <div>Budget</div>
+            <label for="amt">Enter an amount</label>
+            <input type="text" id="amt" name="amount" placeholder="N150,000">
+           </fieldset>
+           <fieldset>
+            <legend>Additional Information / Questions</legend>
+            <label for="extra">Additional Notes</label>
+            <textarea name="extra" id="extra"></textarea>
+           </fieldset>
+                <input type="submit" value="Share My preference ">
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
