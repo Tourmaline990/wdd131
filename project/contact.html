@@ -6,24 +6,30 @@
     <title>Contact Us</title>
     <meta name="author" content="Agbetoba Aaliya">
     <meta name="description" content="Contact page, to enable users rach out, and make a selection based on their preference.">
-    <script src="scripts/project.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project_large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+     <header>
         <div>
         <img src="images/touring_naija.webp" alt="logo image with a title of touring_naija" loading="lazy">
         </div>
+        <button type="button" id="dropdown"></button>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="">Destinations</a>
-            <a href="">About</a>
-            <a href="contact.html">Contact Us</a>
-    </header>
+          <ul class="navigation">
+            <li><a href="index.html" >Home</a></li>
+            <li> <a href="trips.html">Destinations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#" class="active">Contact Us</a></li>
+         </ul>
+        </nav>
+      </header>
     <main>
-        <form  method="get" action="personalized.html">
+        <form  method="get" action="personalized.html" class="form">
            <fieldset>
               <legend>Your Information</legend>
               <label for="name">Name*</label>
@@ -31,37 +37,48 @@
               <label for="email">Email*</label>
               <input type="email" id="email" name="email" placeholder="someone@gmail.com" required>
               <div>Age Range*</div>
-              <input type="radio" name="age" id="age_1" value="1" required>
-              <label for="age_1">18 - 30</label>
-              <input type="radio" name="age" id="age_2" value="2" required>
-              <label for="age_2">30 - 45</label>
-              <input type="radio" name="age" id="age_3" value="3" readonly>
-              <label for="age_3">45 - 60</label>
+              <label for="age_1">
+              <input type="radio" name="age" id="age_1" value="1" required>18 - 30
+              </label>
+              <label for="age_2">
+              <input type="radio" name="age" id="age_2" value="2" required>30 - 45
+              </label>
+              <label for="age_3">
+              <input type="radio" name="age" id="age_3" value="3" required>45 - 60
+              </label>
            </fieldset>
            <fieldset>
             <legend>Travel preferences</legend>
             <div>What type of destination interest you? </div>
-            <input type="checkbox" id="rock" name="" value="" >
-            <label for="rock">Rocky/Mountains</label>
-            <input type="checkbox" id="beach" name="" value="" >
-            <label for="beach">Beaches/Island</label>
-            <input type="checkbox" id="history" name="" value="" >
-            <label for="history">Historical/cultural sites</label>
-            <input type="checkbox" id="countryside" name="" value="" >
-            <label for="countryside">Quiet Countryside</label>
-            <input type="checkbox" id="safari" name="" value="" >
-            <label for="safari">Wildlife/Safari</label>
-            <input type="checkbox" id="urban" name="" value="" >
-            <label for="urban">Urban Cities</label>
+            <label for="rock">
+            <input type="checkbox" id="rock" name="" value="" >Rocky/Mountains
+            </label>
+            <label for="beach">
+            <input type="checkbox" id="beach" name="" value="" >Beaches/Island
+             </label>
+            <label for="history">
+            <input type="checkbox" id="history" name="" value="" >Historical/cultural sites
+            </label>
+            <label for="countryside">
+            <input type="checkbox" id="countryside" name="" value="" >Quiet Countryside
+            </label>
+            <label for="safari">
+            <input type="checkbox" id="safari" name="" value="" >Wildlife/Safari
+            </label>
+            <label for="urban">
+            <input type="checkbox" id="urban" name="" value="" >Urban Cities
+            </label>
             <label for="travel">What type of traveler are you? </label>
             <select name="traveler" id="travel" required>
                 <option disabled selected value="">Please select...</option>
             </select>
             <div>Do you have any allergy?</div>
-            <label for="yes">Yes</label>
-            <input type="radio" id="yes" name="num" value="yes">
-            <label for="no">No</label>
-            <input type="radio" id="no" name="num" value="no">
+            <label for="yes">
+            <input type="radio" id="yes" name="num" value="yes">Yes
+            </label>
+            <label for="no">
+            <input type="radio" id="no" name="num" value="no">No
+            </label>
             <div class="allergy_container"></div>
             <div>Budget</div>
             <label for="amt">Enter an amount</label>
@@ -75,11 +92,12 @@
                 <input type="submit" value="Share My preference ">
         </form>
     </main>
-    <footer>
+   
         <footer>
+            
         <p>©️ <span id="year"></span> Agbetoba🌴Aliya🌴Nigeria</p>
         <p >Last Modified: <span id="modify"></span></p>
     </footer>
-    </footer>
+ 
 </body>
 </html>

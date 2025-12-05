@@ -1,0 +1,49 @@
+@media screen and (min-width: 768px){
+    :root{
+    --heading_fonts: 'lato';
+    --body_fonts: 'roboto slab','open sans';
+    --color1: #0F2F24;
+    --color2 : #CFAF64;
+    --color3: #FFFFFf;
+    --color4: #1C1C1C;
+    }  
+    
+    header,footer{
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    main{
+        max-width: 85%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .navigation  {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+        
+    }
+    .navigation a{
+        text-align: center;
+        font-size: 1.3rem;
+        font-family:var(--heading_fonts);
+    }
+    #dropdown{
+        display: none;
+    }
+    footer{
+        font-size: 1.3rem;
+    }
+    #contain{
+        grid-template-columns: auto auto ;
+        gap: 30px;
+    }
+    .future{
+        background-color: #f3f3f3;
+        padding: 2rem;
+    }
+}

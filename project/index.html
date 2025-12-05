@@ -6,7 +6,9 @@
     <title>Touring Naija Home page</title>
     <meta name="author" content="Agbetoba Aaliya">
     <meta name="description" content="Touring Naija landing page (home) .">
-    <script src="scripts/project.js" defer></script>
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project_large.css">
+    <script src="scripts/index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
@@ -16,14 +18,29 @@
         <div>
         <img src="images/touring_naija.webp" alt="logo image with a title of touring_naija" loading="lazy">
         </div>
+        <button type="button" id="dropdown"></button>
         <nav>
-            <a href="#">Home</a>
-            <a href="">Destinations</a>
-            <a href="">About</a>
-            <a href="contact.html">Contact Us</a>
+          <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li> <a href="trips.html">Destinations</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+         </ul>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <picture>
+            <source srcset="images/hero_image.webp"  media="(min-width: 1000px)" >
+            <source srcset="images/middle_hero.webp" media="(min-width: 750px)">
+            <img src="images/hero_image_m.webp" alt="default image to be rendered on browsers" loading="lazy">
+        </picture>
+        <section class="home">
+            <h1>Touring Naija - Explore, Experience.</h1>
+            <p>We help you explore Nigeria with easy travel tips, location guides, and curated experiences.</p>
+            <p>Discover Places to visit, detailed descriptions of their locations, what to eat, and everything uniquely Naija. </p>
+            <button id="btn">Explore Destinations</button>
+        </section>
+    </main>
     <footer>
         <p>©️ <span id="year"></span> Agbetoba🌴Aliya🌴Nigeria</p>
         <p >Last Modified: <span id="modify"></span></p>

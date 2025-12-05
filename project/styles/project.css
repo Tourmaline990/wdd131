@@ -1,0 +1,301 @@
+:root{
+    --heading_fonts: 'lato';
+    --body_fonts: 'roboto slab','open sans';
+    --color1: #0F2F24;
+    --color2 : #CFAF64;
+    --color3: #FFFFFf;
+    --color4: #1C1C1C;
+}
+
+/*   INDEX.HTML  
+Combining with accent color
+
+--color1 and --color4 → backgrounds
+
+--color3 → text
+
+--color2 → accents, buttons, hover states
+A thin top/bottom border in gold can add elegance:
+*/
+
+picture img,
+.about img{
+   
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--color4);
+    margin: 0 auto;
+    
+}
+header,footer{
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 1.2rem;
+    background-color: var(--color1);
+}
+main{
+    max-width: 750px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+header{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: 5px solid var(--color2);
+}
+#dropdown::before{
+    content:"☰" ;
+}
+#dropdown.open::before{
+    content: '❌';  
+}
+header div{
+    grid-column: 1;
+}
+header div img
+{
+    display: block;
+    max-width: 70%;
+    box-shadow: 2px 3px 4px var(--color4);
+    border: 1px solid var(--color4);
+}
+nav{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+#dropdown{
+    font-size: 2rem;
+    background: none;
+    border: 0;
+    color:var(--color3);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.navigation{
+    display: none;
+}
+.navigation.open{
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+}
+.navigation a{
+    color: var(--color3);
+    font-family: var(--heading_fonts);
+    text-decoration: none;
+    font-size: 1rem;
+}
+.navigation a:hover{
+    text-decoration: underline double var(--color2) 2px;
+}
+.navigation a.active::after{
+    content: '🎈';
+    font-size: 1.5rem;
+}
+footer{
+   color: var(--color3);
+   border-top: 4px solid var(--color2);
+   font-family: var(--heading_fonts);
+   font-size: 1rem;
+   text-align: center;
+}
+.home h1,
+.about h2,
+.third h3,
+.client h4,
+.she h1{
+   margin-top: 2.5rem ;
+   font-family: var(--heading_fonts);
+   text-align: center;
+   font-size: 1.5rem;
+   color: var(--color4);
+}
+.home p,
+.about p,
+.third p,
+#true p,
+.she p{
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: var(--body_fonts);
+    padding: 1rem;
+}
+.home button,
+.review{
+    display: block;
+    margin: 0 auto;
+    padding: .7rem;
+    max-width: 200px;
+    font-family: var(--heading_fonts);
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--color2);
+    border-top: 5px solid var(--color1);
+    box-shadow: 3px 4px 3px black;
+}
+.spam{
+    padding: .2rem;
+    border: 1px solid black;
+    display: block;
+    max-width: 80px;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-top: 1rem;
+    background-color: var(--color2);
+    box-shadow: 3px 4px 3px black;
+    color: var(--color4);
+    border-radius: 10px;
+}    
+#true{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,min-max(250px,1fr));
+    gap: 5px;
+
+}
+#true p{
+    background-color: #f3f3f3;
+    text-align: center;   
+}
+
+#rev{
+    display: block;
+    width: 200px;
+    padding: 1rem;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+#fly{
+   display: block; 
+   font-size: .9rem;
+   margin: 0 auto;
+   margin-bottom: 10px;
+   width: 150px;
+   padding: .5rem;
+}
+.form fieldset{
+    border: 1px solid var(--color1);
+    margin: 2rem 0;
+    border-radius: 7px;
+    padding: .5rem 3%;
+}
+.form legend{
+    padding: 0.5rem;
+    font-family: var(--heading_fonts);
+    color: var(--color4);
+    font-size: 1rem;
+}
+.form label,
+.form div{
+    display: block;
+    font-size: .9rem;
+    font-family: var(--body_fonts);
+    color: var(--color4);
+    padding-top: 1rem;
+}
+.form input[type = 'text'],
+.form input[type = 'email'],
+.form select{
+    border: 1px solid var(--color4);
+    background-color: #f5f5f5;
+    color:var(--color4) ;
+    padding: .75rem;
+    border-radius: 6px;
+    appearance: none;
+    display: block;
+    width: 90%;
+    max-width: 400px;
+}
+
+input[type = 'radio'],
+input[type = 'checkbox']{
+    margin-right:6px ;
+}
+.form input[type = 'submit']{
+    border: none;
+    background-color: var(--color2);
+    color: var(--color4);
+    padding: .75rem;
+    width: 90%;
+    margin: 1rem 2% 2rem 2%;
+    max-width: 400px;
+    border-radius: 10px;
+    border-bottom:5px solid var(--color1) ;
+    box-shadow: 3px 4px 5px black;
+}
+.form input:required{
+    border-right: 3px solid var(--color1);
+}
+.form input:required:valid{
+    border-right: 5px solid var(--color2) ;
+}
+.form textarea{
+    padding: .75rem;
+    width: 90%;
+    max-width: 400px;
+}
+.future{
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+.future h3,
+.d{
+    text-align: center;
+    font-family: var(--heading_fonts);
+    font-size: 1.4rem;
+    color: var(--color4);
+}
+.future p{
+    text-align: center;
+    font-family: var(--body_fonts);
+    font-size: 1rem;
+    color: var(--color4);
+    padding-bottom: 2rem;
+}
+.future button{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    padding: .7rem;
+    max-width: 400px;
+    font-family: var(--heading_fonts);
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--color2);
+    border-bottom: 5px solid var(--color1);
+    box-shadow: 3px 4px 3px black;
+}
+#contain{
+    display: grid;
+    grid-template-columns: 1fr ;
+   gap: 10px;
+}
+.future img{
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+    animation: fade 15s;
+    border: 1px solid var(--color1);
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.d{
+    font-size: 1.4rem;
+}
+
+    
