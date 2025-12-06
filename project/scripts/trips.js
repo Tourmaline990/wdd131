@@ -31,7 +31,7 @@ const destinations = [
         unique: "Offers elevator and stair access with panoramic city views. ",
         Activities: "Hiking, sightseeing, cultural tours",
        type: "Countryside , Historical ",
-        url: "images/olumo_rock.webp"
+        url: "images/olumo-rock.webp"
     },
      {
         tripName: "Awhum Waterfall & Cave",
