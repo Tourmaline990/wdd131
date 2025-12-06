@@ -157,8 +157,8 @@ footer{
 }    
 #true{
     display: grid;
-    grid-template-columns: repeat(auto-fit,min-max(250px,1fr));
-    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 
 }
 #true p{
