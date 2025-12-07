@@ -55,7 +55,7 @@ header div{
 }
 header div img
 {
-    width: 69%;
+  
     display: block;
     max-width: 70%;
     box-shadow: 2px 3px 4px var(--color4);
