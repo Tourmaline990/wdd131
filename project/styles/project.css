@@ -55,10 +55,12 @@ header div{
 }
 header div img
 {
+    width: 69%;
     display: block;
     max-width: 70%;
     box-shadow: 2px 3px 4px var(--color4);
     border: 1px solid var(--color4);
+    height: auto;
 }
 nav{
     grid-column: 2;
