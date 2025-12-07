@@ -46,4 +46,9 @@
         background-color: #f3f3f3;
         padding: 2rem;
     }
+    #true{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 15px;
+    }
 }
