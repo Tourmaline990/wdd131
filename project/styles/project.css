@@ -156,9 +156,10 @@ footer{
     border-radius: 10px;
 }    
 #true{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 #true p{
