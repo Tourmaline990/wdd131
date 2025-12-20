@@ -16,6 +16,7 @@ let btn = document.querySelector('.review');
      fly.value = 'done';
      fly.id = 'fly'
      app.append(fly)
+     
      // event listener on submit button
      fly.addEventListener("click",()=>{
           let a =  document.createElement('p');
