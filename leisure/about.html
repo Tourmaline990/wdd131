@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homemade homepage</title>
+    <title>Homemade About Us page</title>
     <meta  name="author"   content="Aaliya Agbetoba">
     <meta name="description"  content="homepage for a food recipe website where users can browse recipes see details and navigate easily">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/about.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-       <div>
+        <div>
         <img src="images/homemade.webp" alt="brand's logo for the website,titled homepage" loading="lazy">
        </div>
         <nav>
@@ -28,17 +28,19 @@
         </nav>
     </header>
     <main>
-       <picture>
-        <source srcset="images/food.webp" media="(min-width: 1000px)">
-        <source srcset="images/pasta.webp" media="(min-width: 750px)">
-        <img src="images/ceviche.webp" alt="a hero image displaying foods" loading="lazy">
-       </picture>
-          <h1>Welcome to Homemade, your go-to lab for recipes.</h1>
-         <div class="pics"></div>
-
+        <section>
+        <h1> About Us </h1>
+           <p>Cooking is more than just filling the stomach—it's an experience in itself. It allows us to cultivate a healthy diet and physique, and it's both relaxing and rewarding. Imagine having a craving; all you need to do is search for the recipe and unleash your culinary artistry.</p>
+           <p>And no, you won't need to browse endlessly or get stressed before cooking. Homemade has you covered—all you need to do is search and filter!</p>
+           <p>At Homemade, we have researched recipes that will come in handy to you, let's help you simplify the process and unlock the chef within you.</p>
+        <button aria-label="read more">Read More</button>
+        <div>
+            <img src="images/cive.webp" alt="A happy chef" loading="lazy">
+        </div>
+        </section>
     </main>
     <footer>
-        <h3>Homemade.com</h3>
+         <h3>Homemade.com</h3>
         <section>
             <p>Home</p>
             <p>Agent</p>
