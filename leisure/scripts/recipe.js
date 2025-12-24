@@ -3,53 +3,10 @@ let today = new Date()
 year.textContent = `${today.getFullYear()}`;
 
 
-
-
 let dropping = document.querySelector(".drop");
 let filter = document.getElementById('filter');
-filter.addEventListener('click',() =>{
-    dropping.textContent = '';
-    // creating Elements
-    let p = document.createElement('p');
-    let ul = document.createElement("ul");
-    let lia =  document.createElement("li");
-    let liab =  document.createElement("li");
-    let liac =  document.createElement("li");
-    let liad =  document.createElement("li");
-    let a = document.createElement('a');
-    let ab = document.createElement('a');
-    let ac = document.createElement('a');
-    let ad = document.createElement('a');
 
-    //populating
-    p.textContent = 'Sort by:'
-    a.href = "";
-    a.classList = 'firsta';
-    ab.href = "";
-    ab.classList = 'seconda';
-    ac.href = '';
-    ac.classList = 'thirda';
-    ad.href = "";
-    ad.classList = 'fourtha';
-    a.textContent = 'snacks';
-    ab.textContent = 'Breakfast';
-    ac.textContent = 'Lunch';
-    ad.textContent = 'Dinner';
-
-    //appending
-    
-    lia.append(a);
-    liab.append(ab);
-    liac.append(ac);
-    liad.append(ad);
-    dropping.append(p);
-    dropping.append(ul);
-    ul.append(lia);
-    ul.append(liab);
-    ul.append(liac);
-    ul.append(liad);
-})
-
+  
 foodie = [
     {
         name: "Yamarita",
@@ -57,7 +14,8 @@ foodie = [
         Description:'Yamarita is a popular Nigerian snack made from yam slices coated in seasoned egg batter and deep-fried until golden.',
         instruction: 'Peel and cut yam into medium sticks!Lightly season yam with salt!Beat eggs in a bowl and add onion, pepper, and salt!Dip yam sticks into the egg mixture!Fry in hot oil until golden brown! Remove and drain excess oil',
         item_needed: 'Knife! Mixing bowl! Frying pan! Slotted spoon',
-        ingriedients: 'Yam! Eggs! Onion (blended or finely chopped)! Salt! Ground pepper! Vegetable oil '
+        ingriedients: 'Yam! Eggs! Onion (blended or finely chopped)! Salt! Ground pepper! Vegetable oil ',
+        images: 'images/yamarita.webp'
       
     },
     {
@@ -66,7 +24,8 @@ foodie = [
         Description:'A quick and simple breakfast made with soft eggs and toasted bread.',
         instruction: 'Crack eggs into a bowl and whisk lightly.! Heat butter in a pan.! Pour in eggs and stir gently until cooked.!Toast bread and serve with eggs.',
         item_needed: 'Frying pan!Bowl!Whisk or fork!Toaster or pan',
-        ingriedients: 'Eggs!Butter or oil!Salt!Bread slices'
+        ingriedients: 'Eggs!Butter or oil!Salt!Bread slices',
+        images: 'images/egg_and_toast.webp'
     },
     {
         name: ' Jollof Rice',
@@ -74,7 +33,8 @@ foodie = [
         Description:'A flavorful West African rice dish cooked in tomato sauce and spices.',
         instruction: 'Blend tomatoes, pepper, and onion.!Fry the blended mixture in oil.!Add seasoning and salt.!Add washed rice and water!Cook until rice is soft and dry.',
         item_needed: 'Blender!Cooking pot!Spoon',
-        ingriedients: 'Rice!Tomatoes!Pepper!Onion!Vegetable oil!Seasoning cubes!Salt'
+        ingriedients: 'Rice!Tomatoes!Pepper!Onion!Vegetable oil!Seasoning cubes!Salt',
+        images: 'images/jollof_rice.webp'
     },
     {
         name: 'Pancakes',
@@ -82,7 +42,8 @@ foodie = [
         Description:'Soft and fluffy pancakes perfect for breakfast or light snacks.',
         instruction: 'Mix dry ingredients in a bowl.!Add milk and egg, whisk until smooth.!Heat pan and lightly oil it.!Pour batter and cook until bubbles form.!Flip and cook the other side.',
         item_needed: 'Mixing bowl!Whisk!Frying pan!',
-        ingriedients: 'Flour!Milk!Egg!Sugar!Baking powder!Butter or oil'
+        ingriedients: 'Flour!Milk!Egg!Sugar!Baking powder!Butter or oil',
+        images: 'images/pancakes.webp'
     },
     {
         name: ' Grilled Chicken',
@@ -90,7 +51,8 @@ foodie = [
         Description:'Juicy chicken marinated with spices and grilled to perfection.',
         instruction: 'Season chicken with spices and salt.!Allow to marinate.!Grill or bake until fully cooked.!Turn occasionally to avoid burning.',
         item_needed: 'Bowl!Grill or oven tray!Tongs',
-        ingriedients: 'Chicken pieces!Spices!Salt!Vegetable oil'
+        ingriedients: 'Chicken pieces!Spices!Salt!Vegetable oil',
+        images: 'images/grilled_chicken.webp'
     },
     {
         name: 'Fried Rice',
@@ -98,7 +60,8 @@ foodie = [
         Description: 'Stir-fried rice mixed with vegetables and seasoning.',
         instruction: 'Heat oil and sauté onion.!Add vegetables and seasoning.!Add cooked rice.!Stir and fry until well mixed.' ,
         item_needed: 'Frying pan or wok!Spoon',
-        ingriedients: 'Cooked rice!Mixed vegetables!Onion!Oil!Seasoning!Salt'
+        ingriedients: 'Cooked rice!Mixed vegetables!Onion!Oil!Seasoning!Salt',
+        images: 'images/fried_rice.webp'
     },
     {
         name: 'Akara (Bean Cakes)',
@@ -106,7 +69,8 @@ foodie = [
         Description:'Deep-fried bean fritters commonly eaten in Nigeria.',
         instruction: 'Peel beans and blend with pepper and onion.!Add salt and mix well.!Scoop mixture into hot oil.!Fry until golden brown.',
         item_needed: 'Blender!Bowl!Frying pan',
-        ingriedients: 'Beans!Pepper!Onion!Salt!Vegetable oil'
+        ingriedients: 'Beans!Pepper!Onion!Salt!Vegetable oil',
+        images: 'images/akara.webp'
     },
     {
         name: 'Spaghetti Bolognese',
@@ -114,7 +78,8 @@ foodie = [
         Description: 'Pasta served with rich tomato and meat sauce.',
         instruction: 'Boil spaghetti until soft.!Fry onion and meat in oil.!Add blended tomatoes and salt.!Simmer sauce and serve over spaghetti.',
         item_needed: 'Pot!Frying pan!Spoon',
-        ingriedients: 'Spaghetti!Ground meat!Tomatoes!Onion!Oil!Salt'
+        ingriedients: 'Spaghetti!Ground meat!Tomatoes!Onion!Oil!Salt',
+        images: 'images/Spaghetti-Bolognese.webp'
     },
     {
         name: 'Fruit Salad',
@@ -122,7 +87,8 @@ foodie = [
         Description:' A refreshing mix of fresh fruits.',
         instruction:'Wash and cut fruits into small pieces.!Mix all fruits in a bowl.!Serve fresh.', 
         item_needed: 'Knife!Cutting board!Bowl',
-        ingriedients: 'Watermelon!Pineapple!Apple!Banana'
+        ingriedients: 'Watermelon!Pineapple!Apple!Banana',
+        images: 'images/fruit_salad.webp'
     },
     {
         name: 'Yam and Egg Sauce',
@@ -130,7 +96,8 @@ foodie = [
         Description:'Boiled yam served with tomato egg sauce.',
         instruction: 'Boil yam until soft.!Fry onion and tomatoes in oil.!Add beaten eggs and salt.!Stir gently and serve with yam.',
         item_needed: 'Pot!Frying pan!Spoon',
-        ingriedients: 'Yam!Eggs!Tomatoes!Onion!Oil!Salt!'
+        ingriedients: 'Yam!Eggs!Tomatoes!Onion!Oil!Salt!',
+        images: 'images/yam-egg-sauce.webp'
     
     },
     {
@@ -139,7 +106,8 @@ foodie = [
         Description:'A filling sandwich with chicken and vegetables.',
         instruction: 'Shred cooked chicken.!Spread mayonnaise on bread.!Add chicken and vegetables.!Close sandwich and serve.',
         item_needed: 'Knife!Pan (optional)!Plate',
-        ingriedients: 'Bread!Cooked chicken!Lettuce!Mayonnaise!Salt!'
+        ingriedients: 'Bread!Cooked chicken!Lettuce!Mayonnaise!Salt!',
+        images: 'images/chick.webp'
     },
     {
         name: 'Homemade Pizza',
@@ -147,7 +115,8 @@ foodie = [
         Description:' Simple homemade pizza with toppings.',
         instruction: 'Roll out dough.!Spread tomato sauce.!Add cheese and toppings.!Bake until cheese melts.',
         item_needed: 'Baking tray!Oven!Spoon',
-        ingriedients: 'Pizza dough!Tomato sauce!Cheese!Toppings of choice'
+        ingriedients: 'Pizza dough!Tomato sauce!Cheese!Toppings of choice',
+        images: 'images/pizza.webp'
 
      
     },
@@ -157,7 +126,8 @@ foodie = [
         Description:'Light and crunchy popcorn.',
         instruction: 'Heat oil in a pot.!Add kernels and cover.!Shake occasionally.!Remove when popping stops.',
         item_needed: 'Pot with lid',
-        ingriedients: 'Popcorn kernels!Oil!Salt or sugar'
+        ingriedients: 'Popcorn kernels!Oil!Salt or sugar',
+        images: 'images/popcorn.webp'
     },
     {
         name: 'Vegetable Soup',
@@ -165,7 +135,8 @@ foodie = [
         Description:' Nutritious soup made with vegetables.',
         instruction: 'Heat palm oil.!Add pepper and seasoning.!Add vegetables and salt.!Cook briefly and serve.',
         item_needed:'Pot!Spoon' ,
-        ingriedients: 'Leafy vegetables!Palm oil!Pepper!Seasoning!Salt'
+        ingriedients: 'Leafy vegetables!Palm oil!Pepper!Seasoning!Salt',
+        images: 'images/poundo.webp'
     },
     {
         name: ' Smoothie',
@@ -173,7 +144,8 @@ foodie = [
         Description:'A blended fruit drink.',
         instruction: 'Add all ingredients to blender.!Blend until smooth.!Pour and serve chilled.',
         item_needed: 'Blender!Cup',
-        ingriedients: 'Banana!Milk!Strawberry or mango!Honey (optional)'
+        ingriedients: 'Banana!Milk!Strawberry or mango!Honey (optional)',
+        images: 'images/smoothie.webp'
     }
 ]
 function splitting(text){
@@ -202,6 +174,8 @@ function read_food(foodie) {
         let ing = splitting(food.ingriedients);
         let ins = splitting(food.instruction);
         let itm = splitting(food.item_needed);
+        let img = document.createElement('img');
+
 
 
         //populating
@@ -210,6 +184,9 @@ function read_food(foodie) {
         h4a.textContent = 'How to prepare'
         h4b.textContent = 'Items Needed'
         desc.textContent = food.Description;
+        img.src = food.images
+        img.alt = 'An image of the dish'
+        img.loading = 'lazy';
 
         //appending
         container.append(h3);
@@ -220,11 +197,56 @@ function read_food(foodie) {
         container.append(ins)
         container.append(h4b);
         container.append(itm)
+        container.append(img)
         dropping.append(container)
     });
     
 }
 
-
-
 read_food(foodie);
+let head = document.querySelector('#head');
+function norm(isString) {
+    let lowered = isString.toLowerCase();
+    let trimmed = lowered.trim();
+    return trimmed;
+}
+function makecallback(val) {
+       return function callback(food){  
+        let obj = food.type.split('!');
+        let refined = obj.map(norm);
+        return refined.includes(val)  
+        };
+  
+}   
+filter.addEventListener('click',() =>{
+dropping.textContent = '';
+let ul = document.createElement("ul");
+let types = ['Snack','Breakfast','Lunch','Dinner','All'];
+    types.forEach(type => {
+        let li =  document.createElement("li");
+        let a = document.createElement('a');
+
+        a.href = '';
+        a.textContent = type;
+
+        li.append(a);
+        ul.append(li)
+    })
+
+dropping.append(ul);
+
+})
+dropping.addEventListener('click',(event) => {
+    dropping.textContent = '';
+   if (event.target.tagName === 'A'){
+     event.preventDefault()
+     let category = event.target.textContent.toLowerCase()
+     head.textContent = category;
+     let finale = foodie.filter(makecallback(category))
+     read_food(finale)
+     if (category === 'all'){
+        read_food(foodie);
+     }
+   }
+})
+
