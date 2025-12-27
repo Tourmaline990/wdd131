@@ -8,12 +8,13 @@ home_foods = [
     {
         images: 'images/dim.webp'
     },
-    {
-        images: "images/pizza.webp"
+     {
+        images: "images/yamarita.webp"
     },
     {
-        images: "images/yamarita.webp"
+        images: "images/poundo.webp"
     }
+   
 ]
 const pi = document.querySelector('.pics')
 function toLoop(an_array) {
@@ -27,6 +28,7 @@ function toLoop(an_array) {
     image.src = name.images;
     image.alt = 'An image displaying food on the  homepage' ;
     image.loading = "lazy"
+    image.classList.add('tap')
 
     // appending
     contain.append(image);
@@ -36,3 +38,13 @@ function toLoop(an_array) {
     
 }
 toLoop(home_foods)
+const nav = document.querySelector('.navigate')
+let menu = document.querySelector('#dropdown')
+menu.addEventListener('click',()=>{
+  menu.classList.toggle('open');
+  nav.classList.toggle('open')
+})
+
+document.querySelector('.btn').addEventListener('click',()=>{
+    window.location.href = 'recipe.html'
+})

@@ -190,6 +190,7 @@ function read_food(foodie) {
 
         //appending
         container.append(h3);
+        container.append(img)
         container.append(desc);
         container.append(h4)
         container.append(ing);
@@ -197,7 +198,6 @@ function read_food(foodie) {
         container.append(ins)
         container.append(h4b);
         container.append(itm)
-        container.append(img)
         dropping.append(container)
     });
     
@@ -241,12 +241,24 @@ dropping.addEventListener('click',(event) => {
    if (event.target.tagName === 'A'){
      event.preventDefault()
      let category = event.target.textContent.toLowerCase()
-     head.textContent = category;
+     if (category){
+        let it = document.createElement('h3')
+        it.textContent = category;
+        it.classList.add('tack')
+        dropping.append(it)
+     }
      let finale = foodie.filter(makecallback(category))
      read_food(finale)
      if (category === 'all'){
         read_food(foodie);
      }
+     
    }
 })
 
+const  menu = document.querySelector('#dropdown')
+const nav = document.querySelector('.navigate')
+menu.addEventListener('click',()=>{
+    menu.classList.toggle('open');
+    nav.classList.toggle('open')
+})

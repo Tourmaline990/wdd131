@@ -20,10 +20,11 @@
     <header>
        <div>
         <img src="images/homemade.webp" alt="brand's logo for the website,titled homepage" loading="lazy">
+        <button aria-label="Menu button" id="dropdown"></button>
        </div>
         <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
+            <ul class="navigate">
+                <li> <a href="#" class="active">Home</a></li>
                 <li> <a href="recipe.html">Recipes</a></li>
                 <li> <a href="about.html">About</a></li>
             </ul>
@@ -35,24 +36,24 @@
         <source srcset="images/pasta.webp" media="(min-width: 750px)">
         <img src="images/ceviche.webp" alt="a hero image displaying foods" loading="lazy">
        </picture>
-          <h1>Welcome to Homemade, your go-to lab for recipes.</h1>
+          <h1 class="done">Welcome to Homemade, your go-to lab for recipes.</h1>
          <div class="pics"></div>
-
+         <button aria-label="View Recipes" class="btn" id="t">View recipes</button>
     </main>
     <footer>
         <h3>Homemade.com</h3>
-        <section>
+        <section class="one">
             <p>Home</p>
             <p>Agent</p>
             <p>About</p>
             <p>T&C</p>
         </section>
-        <section>
+        <section class="two">
             <a href="https://x.com/"><img src="images/twitter.webp" alt="An image of twitter icon" loading="lazy" ></a>
             <a href="https://www.instagram.com/"><img src="images/ig.webp" alt="An image of instagram icon" loading="lazy"></a>
             <a href="https://www.linkedin.com/in/haliya-agbetoba-8860b9376/"><img src="images/linkedin.webp" alt="An image of linkedin icon" loading="lazy"></a>
         </section>
-        <p>Copyright <span class="year">©️</span> All rights reserved. </p>
+        <p class="three">Copyright <span class="year">©️</span> All rights reserved. </p>
     </footer>
 </body>
 </html>

@@ -68,7 +68,7 @@ nav {
     grid-column: 2;
 }
 nav a{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: var(--heading_fonts);
     text-decoration: none;
     color: var(--color_1);
@@ -78,7 +78,7 @@ nav a:hover{
 }
 nav a.active::after{
     content:'🎈' ;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 footer{
     display: grid;
@@ -120,16 +120,25 @@ justify-content: space-evenly;
      font-size: 1.2rem; 
      font-family: var(--heading_fonts);
 }
-.dept img{
+.dept img,
+picture img,
+.pics img{ 
   display: block;
   margin: 0 auto;
   max-width: 100%;
+  
 }
-.ok h1{
+.ok h1,
+.done,
+.he,
+.drop  section h3,h4,
+.tack{
 text-align: center;
 font-family: var(--heading_fonts);
+font-size: 1.1rem;
 }
-.ok p{
+.ok p,
+.trap{
     text-align: center;
     font-family: var(--body_font);
     padding: 1rem;
@@ -147,7 +156,56 @@ font-family: var(--heading_fonts);
     border-top: 4px solid var(--color_3) ;
    margin-bottom:1.5rem ;
 }
-.btn:hover{
+.btn:hover,
+#filter:hover
+{
     background-color: var(--color_2);
     color: var(--color_1);
+}
+#t{
+    margin-top: 1.3rem;
+}
+.pics{
+   display: flex;
+   gap: 10px;
+   background-color: #f3f3f3;
+}
+.drop section{
+    display: flex;
+    flex-direction: column;
+}
+.drop section p{
+    font-family: var(--body_font);
+    padding: 0.4rem;
+}
+.drop section img{
+  border-radius: 7px;
+  border: 1px solid #eee; 
+}
+#filter::before{
+    content: '🧺';
+    font-size: 2rem;
+    
+}
+#filter{
+box-shadow: 3px 3px 4px black;
+    border: none;
+    background: none;
+    margin-top: 1rem;
+    background-color: #2D2D2D;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.drop ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.drop ul a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+.drop ul a:hover{
+    text-decoration: 2px  overline var(--color_2);
 }
