@@ -243,7 +243,8 @@ dropping.addEventListener('click',(event) => {
      let category = event.target.textContent.toLowerCase()
      if (category){
         let it = document.createElement('h3')
-        it.textContent = category;
+        let ref = category.charAt(0).toUpperCase() + category.slice(1);
+        it.textContent =  ref ;
         it.classList.add('tack')
         dropping.append(it)
      }

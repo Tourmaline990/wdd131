@@ -173,6 +173,7 @@ font-size: 1.1rem;
 .drop section{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 .drop section p{
     font-family: var(--body_font);
@@ -181,6 +182,7 @@ font-size: 1.1rem;
 .drop section img{
   border-radius: 7px;
   border: 1px solid #eee; 
+  max-width: 100%;
 }
 #filter::before{
     content: '🧺';
@@ -208,4 +210,7 @@ box-shadow: 3px 3px 4px black;
 }
 .drop ul a:hover{
     text-decoration: 2px  overline var(--color_2);
+}
+.tack::first-letter{
+  font-size: 1.2rem;
 }
