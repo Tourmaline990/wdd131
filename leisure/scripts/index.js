@@ -48,3 +48,8 @@ menu.addEventListener('click',()=>{
 document.querySelector('.btn').addEventListener('click',()=>{
     window.location.href = 'recipe.html'
 })
+
+let  counter = (window.localStorage.getItem('count') )|| 0;
+
+counter ++
+localStorage.setItem('counting_is',counter);
