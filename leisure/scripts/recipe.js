@@ -154,7 +154,7 @@ function splitting(text){
         if(part.trim() === ''){
             return;
         }
-      p = document.createElement('p');
+      let p = document.createElement('p');
       p.textContent = part.trim();
       contain.append(p);
     })
@@ -162,44 +162,73 @@ function splitting(text){
 }
 
 function read_food(foodie) {
-    foodie.forEach(food => {
-        
+    foodie.forEach(food => { 
         // CREATING ELEMENTS
+        let divi = document.createElement('div');
         let container =  document.createElement('section');
         let h3 = document.createElement('h3');
         let desc = document.createElement('p');
-        let h4 = document.createElement('h4');
-        let h4a = document.createElement('h4');
-        let h4b = document.createElement('h4');
-        let ing = splitting(food.ingriedients);
-        let ins = splitting(food.instruction);
-        let itm = splitting(food.item_needed);
         let img = document.createElement('img');
-
-
-
-        //populating
-        h3.textContent = food.name;
-        h4.textContent = 'Ingriedients'
-        h4a.textContent = 'How to prepare'
-        h4b.textContent = 'Items Needed'
-        desc.textContent = food.Description;
         img.src = food.images
         img.alt = 'An image of the dish'
         img.loading = 'lazy';
-
-        //appending
+        let button = document.createElement('button');
+        button.classList.add('may');
+        let b = document.createElement('button');
+        b.classList.add('june');
+        //populating
+        h3.textContent = food.name;
+        desc.textContent = food.Description;
+        
+          //appending
         container.append(h3);
-        container.append(img)
+        divi.append(img)
+        container.append(divi)
         container.append(desc);
-        container.append(h4)
-        container.append(ing);
-        container.append(h4a);
-        container.append(ins)
-        container.append(h4b);
-        container.append(itm)
-        dropping.append(container)
+        container.append(button);
+        dropping.append(container);
+       
+        button.addEventListener('click',() => {
+            
+             let h4 = document.createElement('h4');
+             let h4a = document.createElement('h4');
+             let h4b = document.createElement('h4');
+             let ing = splitting(food.ingriedients);
+             let ins = splitting(food.instruction);
+             let itm = splitting(food.item_needed);
+
+             h4.textContent = 'Ingriedients';
+             h4a.textContent = 'How to prepare'
+             h4b.textContent = 'Items Needed';
+
+             container.append(h4);
+             container.append(ing);
+             container.append(h4a);
+             container.append(ins)
+             container.append(h4b);
+             container.append(itm);
+            
+             button.remove()
+             container.append(b);
+
+            b.addEventListener('click',()=>{
+                h4.remove()
+                ing.remove()
+                h4a.remove()
+                ins.remove()
+                h4b.remove()
+                itm.remove()
+
+                b.remove()
+               
+                container.append(button)
+             })
+        
+    
+        }); 
+         
     });
+     
     
 }
 
@@ -237,8 +266,9 @@ dropping.append(ul);
 
 })
 dropping.addEventListener('click',(event) => {
-    dropping.textContent = '';
+   
    if (event.target.tagName === 'A'){
+     dropping.textContent = '';
      event.preventDefault()
      let category = event.target.textContent.toLowerCase()
      if (category){
