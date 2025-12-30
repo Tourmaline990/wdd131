@@ -24,7 +24,7 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--color_6);
     color: var(--color_1); 
-    border-bottom: 10px solid var(--color_2); 
+    border-bottom: 10px solid wheat; 
 }
 header div{
     grid-column: 1;
@@ -86,7 +86,7 @@ footer{
     grid-template-rows: auto auto auto auto;
     background-color: var(--color_6);
     color: var(--color_1); 
-    border-top: 10px solid var(--color_2);
+    border-top: 10px solid wheat;
    
 }
 footer h3{
@@ -173,7 +173,6 @@ font-size: 1.1rem;
 .drop section{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 .drop section p{
     font-family: var(--body_font);
@@ -213,4 +212,27 @@ box-shadow: 3px 3px 4px black;
 }
 .tack::first-letter{
   font-size: 1.2rem;
+}
+.may::before{
+    content: '▼';
+    color: white;
+}
+.june::before{
+    content: '✕';
+    color: white;
+   
+}
+.may,
+.june{
+    background: 0;
+    border: 0;
+    margin: 0 auto;
+    font-size: 2rem;
+    border: 3px solid var(--color_2);
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 5px 6px black;
+    background-color: var(--color_2);
+    border: 1px solid white;
+    margin-bottom: 1rem;
 }
