@@ -176,9 +176,6 @@ function read_food(foodie) {
         button.classList.add('may');
         button.setAttribute('aria-expanded',false);
         button.textContent = 'Show more'
-        //let b = document.create Element('button');
-       // b.classList.add('june');
-        //populating
         h3.textContent = food.name;
         desc.textContent = food.Description;
         
@@ -194,7 +191,7 @@ function read_food(foodie) {
            
             
 
-            headings = [  'Ingriedients','How to prepare','Items Needed' ]
+        const headings = [  'Ingriedients','How to prepare','Items Needed' ]
             
            
             headings.forEach(text => {
