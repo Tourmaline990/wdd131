@@ -213,26 +213,27 @@ box-shadow: 3px 3px 4px black;
 .tack::first-letter{
   font-size: 1.2rem;
 }
-.may::before{
+.may::after{
     content: '▼';
-    color: white;
+    margin-left: 0.5rem;
+    display: inline-block;
+    transition: transform 0.5s ease;
+      
 }
-.june::before{
-    content: '✕';
-    color: white;
-   
+
+.may[aria-expanded = 'true']::after{
+    transform: rotate(180deg);
 }
-.may,
-.june{
+.may{
+    
     background: 0;
     border: 0;
-    margin: 0 auto;
-    font-size: 2rem;
-    border: 3px solid var(--color_2);
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 4px 5px 6px black;
+    max-width:  250px;
     background-color: var(--color_2);
-    border: 1px solid white;
-    margin-bottom: 1rem;
+     margin: 0 auto;
+     padding: 0.8rem;
+     box-shadow: 4px 5px 6px black;
+     border-radius: 10px;
+     color: var(--color_1);
+      
 }

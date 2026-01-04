@@ -1,0 +1,21 @@
+#recipeDetails {
+  max-height: 0;
+  overflow: hidden; /* if it is higher than max height, hide it.  */
+  transition: max-height 0.3s ease-out;  /*  that id, we wold llove to transition? transition?
+  its max height, time - 0.3s, ease-out - slowly and out instead of the id jumpscare */
+ 
+}
+
+#recipeDetails.show {
+  max-height: 500px; /* enough for content */
+}
+button::after {
+  content: "▼";
+  display: inline-block;  /* it will be inline(like a text) and block - (stylable) dependently independent  */
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;  /* transition - change, transform at this time and ease.  */
+}
+
+button[aria-expanded="true"]::after {
+  transform: rotate(180deg);  /*  360 degree, 180 degree half a circle */
+}

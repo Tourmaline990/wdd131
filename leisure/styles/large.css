@@ -123,9 +123,8 @@
     float: left;
     padding: 1rem;
   }
-  .may,
-  .june{
-     width: 150px;
+  .may{
+     max-width: 450px;
    }
    .drop ul a{
     font-size: 1.2rem;

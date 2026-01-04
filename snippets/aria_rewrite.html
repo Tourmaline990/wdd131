@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arias</title>
+    <script src="scripts/aria_rewrite.js" defer></script>
+    <link rel="stylesheet" href="styles/aria_rewrite.css">
+</head>
+<body>
+    <header>Welcome</header>
+    <main>
+        <button aria-label="a button" id="main-button" aria-controls="#a_div" 
+        aria-expanded="false">Click</button>
+
+        <div hidden id="a_div">
+            <p>Let's see.....</p>
+        </div>
+    </main>
+    <footer>Goodbye</footer>
+</body>
+</html>

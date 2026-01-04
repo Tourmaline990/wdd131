@@ -174,8 +174,10 @@ function read_food(foodie) {
         img.loading = 'lazy';
         let button = document.createElement('button');
         button.classList.add('may');
-        let b = document.createElement('button');
-        b.classList.add('june');
+        button.setAttribute('aria-expanded',false);
+        button.textContent = 'Show more'
+        //let b = document.create Element('button');
+       // b.classList.add('june');
         //populating
         h3.textContent = food.name;
         desc.textContent = food.Description;
@@ -189,41 +191,88 @@ function read_food(foodie) {
         dropping.append(container);
        
         button.addEventListener('click',() => {
+           
             
-             let h4 = document.createElement('h4');
-             let h4a = document.createElement('h4');
-             let h4b = document.createElement('h4');
-             let ing = splitting(food.ingriedients);
-             let ins = splitting(food.instruction);
-             let itm = splitting(food.item_needed);
 
-             h4.textContent = 'Ingriedients';
-             h4a.textContent = 'How to prepare'
-             h4b.textContent = 'Items Needed';
-
-             container.append(h4);
-             container.append(ing);
-             container.append(h4a);
-             container.append(ins)
-             container.append(h4b);
-             container.append(itm);
+            headings = [  'Ingriedients','How to prepare','Items Needed' ]
             
-             button.remove()
-             container.append(b);
+           
+            headings.forEach(text => {
+                const h4 = document.createElement('h4');
+                h4.textContent = text;
+                h4.classList.add('hidden')
+                container.append(h4)
+                if(h4.textContent === 'Ingriedients'){
+                  let ing = splitting(food.ingriedients)
+                  ing.classList.add('hidden')
+                  container.append(ing)
+                }
+                else if(h4.textContent === 'How to prepare'){
+                   let ins = splitting(food.instruction);
+                   ins.classList.add('hidden')
+                   container.append(ins)
+                }
+                else  if(h4.textContent === 'Items Needed'){
+                    let itm = splitting(food.item_needed)
+                    itm.classList.add('hidden')
+                    container.append(itm)
+                }
+                 
 
-            b.addEventListener('click',()=>{
-                h4.remove()
-                ing.remove()
-                h4a.remove()
-                ins.remove()
-                h4b.remove()
-                itm.remove()
+            });
+            const hide = document.querySelectorAll('.hidden'); // all hidden children, return a node, maybe a nodev === array.
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';   // false
+            button.setAttribute('aria-expanded',!isExpanded);  //  true
+            hide.forEach(el=>{   
+                el.hidden = isExpanded; // hidden is false
+                el.classList.toggle('show',!isExpanded); // true
+                
+            })
+            button.textContent = !isExpanded? 'Show less': 'Show more'
+            
+            
+            
 
-                b.remove()
-               
-                container.append(button)
-             })
-        
+
+            /*const sections = [
+  { title: 'Ingredients', data: food.ingriedients },
+  { title: 'How to prepare', data: food.instruction },
+  { title: 'Items Needed', data: food.item_needed }
+];
+
+sections.forEach(section => {
+  const h4 = document.createElement('h4');
+  h4.textContent = section.title;
+  container.append(h4);
+
+  const content = splitting(section.data);
+  container.append(content);
+});
+*/
+
+         
+             ///let h4 = document.createElement('h4')
+             //let h4a = document.createElement('h4');
+             //let h4b = document.createElement('h4');
+             //let ing = splitting(food.ingriedients);
+             //let ins = splitting(food.instruction);
+             //let itm = splitting(food.item_needed);
+
+              //h4.textContent = 'Ingriedients';
+              //h4a.textContent = 'How to prepare'
+             // h4b.textContent = 'Items Needed';
+
+             // container.append(h4);
+             // container.append(ing);
+             // container.append(h4a);
+             // container.append(ins)
+              //container.append(h4b);
+              // container.append(itm);
+            
+             
+          
+
+            
     
         }); 
          

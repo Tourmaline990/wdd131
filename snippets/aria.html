@@ -1,0 +1,37 @@
+<!-- 
+  Re-explaining new terms: 
+
+  aria expanded - aria is for screen readers, expanded - for something to expand, it can also un-expand. the value states 
+  what it is at the present moment.
+  together combined - screen readers at the moment expanded is false(not open yet.) or true(open.)
+
+  aria controls - 'aria-controls="recipeDetails"' this is pointing to a different id.
+  aria  - screen readers, controls?...to control is to be responsible for something else, positively or negatively.
+  together combined - screen readers, the button is responsible for "recipeDetails".
+
+  hidden - hides the state  of an element.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/aria.css">
+    <script src="scripts/aria.js" defer></script>
+</head>
+<body>
+    <main>
+        <button id="toggleInfo" aria-expanded="false" aria-controls="recipeDetails">
+           Show More
+        </button>
+
+<div id="recipeDetails" hidden>
+  <p>Here is more info about the recipe...</p>
+</div>
+
+    </main>
+</body>
+</html>
