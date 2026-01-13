@@ -186,37 +186,35 @@ function read_food(foodie) {
         container.append(desc);
         container.append(button);
         dropping.append(container);
+        const big_div = document.createElement('div');
+        
        
         button.addEventListener('click',() => {
-           
-            
-
+        big_div.textContent = ""
         const headings = [  'Ingriedients','How to prepare','Items Needed' ]
-            
-           
             headings.forEach(text => {
                 const h4 = document.createElement('h4');
                 h4.textContent = text;
                 h4.classList.add('hidden')
-                container.append(h4)
+                big_div.append(h4);
                 if(h4.textContent === 'Ingriedients'){
                   let ing = splitting(food.ingriedients)
                   ing.classList.add('hidden')
-                  container.append(ing)
+                  big_div.append(ing)
                 }
                 else if(h4.textContent === 'How to prepare'){
                    let ins = splitting(food.instruction);
                    ins.classList.add('hidden')
-                   container.append(ins)
+                   big_div.append(ins)
                 }
-                else  if(h4.textContent === 'Items Needed'){
+                else if(h4.textContent === 'Items Needed'){
                     let itm = splitting(food.item_needed)
                     itm.classList.add('hidden')
-                    container.append(itm)
+                    big_div.append(itm)
                 }
-                 
-
             });
+            container.append(big_div);
+             
             const hide = document.querySelectorAll('.hidden'); // all hidden children, return a node, maybe a nodev === array.
             const isExpanded = button.getAttribute('aria-expanded') === 'true';   // false
             button.setAttribute('aria-expanded',!isExpanded);  //  true
@@ -339,3 +337,4 @@ menu.addEventListener('click',()=>{
     menu.classList.toggle('open');
     nav.classList.toggle('open')
 })
+
